@@ -12,8 +12,9 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "coffee-script": "~1.6.1",
-    "superagent": "~0.13.0",
-    "nconf": "~0.6.7"
+    "m3u8stream": "^0.2.1",
+    "nconf": "~0.6.7",
+    "superagent": "~0.13.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
