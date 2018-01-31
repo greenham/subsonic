@@ -45,7 +45,11 @@
     };
 
     Subsonic.prototype.stream = function(link, outputFile) {
-      m3u8stream(link).pipe(fs.createWriteStream(outputFile));
+      m3u8stream(link, {
+        chunkReadahead: 3,
+        highWaterMark: 32768
+      }).pipe(fs.createWriteStream(outputFile));
+      return this;
     };
 
     Subsonic.prototype.ping = function(cb) {
